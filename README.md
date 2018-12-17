@@ -1,4 +1,4 @@
-# fp-dart
+# fpdart
 
 Functional programming in Dart 
 
