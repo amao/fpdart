@@ -1,59 +1,59 @@
 import 'package:fpdart/Hkt.dart';
 import 'package:fpdart/function.dart';
 
-mixin Functor1<F extends HKT> {
+abstract class Functor1<F extends HKT> {
   HKT<F, B> map<A, B>(HKT<F, A> fa, B f(A a));
 }
 
-mixin Functor2<F extends HKT2> {
+abstract class Functor2<F extends HKT2> {
   HKT2<F, L, B> map<L, A, B>(HKT2<F, L, A> fa, B f(A a));
 }
 
-mixin Functor3<F extends HKT3> {
+abstract class Functor3<F extends HKT3> {
   HKT3<F, U, L, B> map<U, L, A, B>(HKT3<F, U, L, A> fa, B f(A a));
 }
 
-mixin Functor4<F extends HKT4> {
+abstract class Functor4<F extends HKT4> {
   HKT4<F, X, U, L, B> map<X, U, L, A, B>(HKT4<F, X, U, L, A> fa, B f(A a));
 }
 
-mixin Functor2C<F extends HKT2, L> {
+abstract class Functor2C<F extends HKT2, L> {
   HKT2<F, L, B> map<A, B>(HKT2<F, L, A> fa, B f(A a));
 }
 
-mixin Functor3C<F extends HKT3, U, L> {
+abstract class Functor3C<F extends HKT3, U, L> {
   HKT3<F, U, L, B> map<A, B>(HKT3<F, U, L, A> fa, B f(A a));
 }
 
-mixin FunctorComposition11<F extends HKT, G extends HKT> {
+abstract class FunctorComposition11<F extends HKT, G extends HKT> {
   HKT<F, HKT<G, B>> map<A, B>(HKT<F, HKT<G, A>> fa, B f(A a));
 }
 
-mixin FunctorComposition12<F extends HKT, G extends HKT2> {
+abstract class FunctorComposition12<F extends HKT, G extends HKT2> {
   HKT<F, HKT2<G, LG, B>> map<LG, A, B>(HKT<F, HKT2<G, LG, A>> fa, B f(A a));
 }
 
-mixin FunctorComposition12C<F extends HKT, G extends HKT2, LG> {
+abstract class FunctorComposition12C<F extends HKT, G extends HKT2, LG> {
   HKT<F, HKT2<G, LG, B>> map<A, B>(HKT<F, HKT2<G, LG, A>> fa, B f(A a));
 }
 
-mixin FunctorComposition21<F extends HKT2, G extends HKT> {
+abstract class FunctorComposition21<F extends HKT2, G extends HKT> {
   HKT2<F, LF, HKT<G, B>> map<LF, A, B>(HKT2<F, LF, HKT<G, A>> fa, B f(A a));
 }
 
-mixin FunctorComposition2C1<F extends HKT2, G extends HKT, LF> {
+abstract class FunctorComposition2C1<F extends HKT2, G extends HKT, LF> {
   HKT2<F, LF, HKT<G, B>> map<A, B>(HKT2<F, LF, HKT<G, A>> fa, B f(A a));
 }
 
-mixin FunctorComposition22<F extends HKT2, G extends HKT2> {
+abstract class FunctorComposition22<F extends HKT2, G extends HKT2> {
   HKT2<F, LF, HKT2<G, LG, B>> map<LF, LG, A, B>(HKT2<F, LF, HKT2<G, LG, A>> fa, B f(A a));
 }
 
-mixin FunctorComposition22C<F extends HKT2, G extends HKT2, LG> {
+abstract class FunctorComposition22C<F extends HKT2, G extends HKT2, LG> {
   HKT2<F, LF, HKT2<G, LG, B>> map<LF, A, B>(HKT2<F, LF, HKT2<G, LG, A>> fa, B f(A a));
 }
 
-mixin FunctorComposition3C1<F extends HKT3, G extends HKT, UF, LF> {
+abstract class FunctorComposition3C1<F extends HKT3, G extends HKT, UF, LF> {
   HKT3<F, UF, LF, HKT<G, B>> map<A, B>(HKT3<F, UF, LF, HKT<G, A>> fa, B f(A a));
 }
 
