@@ -146,16 +146,10 @@ HKT<F, B> Function(A, HKT<F, B Function(A)>) flap<F extends HKT, A, B>(Functor1<
 //getFunctorComposition
 
 class Fc3C1<F extends HKT3, G extends HKT, UF, LF> with FunctorComposition3C1<F, G, UF, LF> {
-  static Fc3C1 _fc3c1Singleton;
   final Functor3C<F, UF, LF> _functorF;
   final Functor1<G> _functorG;
-  factory Fc3C1(Functor3C<F, UF, LF> functionF, Functor1<G> functorG) {
-    if (_fc3c1Singleton == null) {
-      _fc3c1Singleton = Fc3C1(functionF, functorG);
-      return _fc3c1Singleton;
-    }
-    return _fc3c1Singleton;
-  }
+  Fc3C1(this._functorF, this._functorG);
+
   @override
   HKT3<F, UF, LF, HKT<G, B>> map<A, B>(HKT3<F, UF, LF, HKT<G, A>> fa, B Function(A a) f) {
     return this._functorF.map(fa, (HKT<G, A> ga) => this._functorG.map(ga, f));
@@ -168,16 +162,9 @@ FunctorComposition3C1<F, G, UF, LF> getFunctorComposition3C1<F extends HKT3, G e
 }
 
 class Fc22C<F extends HKT2, G extends HKT2, LG> with FunctorComposition22C<F, G, LG> {
-  static Fc22C _fc22cSingleton;
   final Functor2<F> _functorF;
   final Functor2C<G, LG> _functorG;
-  factory Fc22C(Functor2<F> functionF, Functor2C<G, LG> functorG) {
-    if (_fc22cSingleton == null) {
-      _fc22cSingleton = Fc22C(functionF, functorG);
-      return _fc22cSingleton;
-    }
-    return _fc22cSingleton;
-  }
+  Fc22C(this._functorF, this._functorG);
 
   @override
   HKT2<F, LF, HKT2<G, LG, B>> map<LF, A, B>(HKT2<F, LF, HKT2<G, LG, A>> fa, B Function(A a) f) {
@@ -191,16 +178,9 @@ FunctorComposition22C<F, G, LG> getFunctorComposition22C<F extends HKT2, G exten
 }
 
 class Fc22<F extends HKT2, G extends HKT2> with FunctorComposition22<F, G> {
-  static Fc22 _fc22Singleton;
   final Functor2<F> _functorF;
   final Functor2<G> _functorG;
-  factory Fc22(Functor2<F> functionF, Functor2<G> functorG) {
-    if (_fc22Singleton == null) {
-      _fc22Singleton = Fc22(functionF, functorG);
-      return _fc22Singleton;
-    }
-    return _fc22Singleton;
-  }
+  Fc22(this._functorF, this._functorG);
 
   @override
   HKT2<F, LF, HKT2<G, LG, B>> map<LF, LG, A, B>(HKT2<F, LF, HKT2<G, LG, A>> fa, B Function(A a) f) {
@@ -214,16 +194,9 @@ FunctorComposition22<F, G> getFunctorComposition22<F extends HKT2, G extends HKT
 }
 
 class Fc2C1<F extends HKT2, G extends HKT, LF> with FunctorComposition2C1<F, G, LF> {
-  static Fc2C1 _fc2c1Singleton;
   final Functor2C<F, LF> _functorF;
   final Functor1<G> _functorG;
-  factory Fc2C1(Functor2C<F, LF> functionF, Functor1<G> functorG) {
-    if (_fc2c1Singleton == null) {
-      _fc2c1Singleton = Fc2C1(functionF, functorG);
-      return _fc2c1Singleton;
-    }
-    return _fc2c1Singleton;
-  }
+  Fc2C1(this._functorF, this._functorG);
 
   @override
   HKT2<F, LF, HKT<G, B>> map<A, B>(HKT2<F, LF, HKT<G, A>> fa, B Function(A a) f) {
@@ -237,16 +210,9 @@ FunctorComposition2C1<F, G, LF> getFunctorComposition2C1<F extends HKT2, G exten
 }
 
 class Fc21<F extends HKT2, G extends HKT> with FunctorComposition21<F, G> {
-  static Fc21 _fc21Singleton;
   final Functor2<F> _functorF;
   final Functor1<G> _functorG;
-  factory Fc21(Functor2<F> functionF, Functor1<G> functorG) {
-    if (_fc21Singleton == null) {
-      _fc21Singleton = Fc21(functionF, functorG);
-      return _fc21Singleton;
-    }
-    return _fc21Singleton;
-  }
+  Fc21(this._functorF, this._functorG);
 
   @override
   HKT2<F, LF, HKT<G, B>> map<LF, A, B>(HKT2<F, LF, HKT<G, A>> fa, B Function(A a) f) {
@@ -260,16 +226,9 @@ FunctorComposition21<F, G> getFunctorComposition21<F extends HKT2, G extends HKT
 }
 
 class Fc12C<F extends HKT, G extends HKT2, LG> with FunctorComposition12C<F, G, LG> {
-  static Fc12C _fc12cSingleton;
   final Functor1<F> _functorF;
   final Functor2C<G, LG> _functorG;
-  factory Fc12C(Functor1<F> functionF, Functor2C<G, LG> functorG) {
-    if (_fc12cSingleton == null) {
-      _fc12cSingleton = Fc12C(functionF, functorG);
-      return _fc12cSingleton;
-    }
-    return _fc12cSingleton;
-  }
+  Fc12C(this._functorF, this._functorG);
 
   @override
   HKT<F, HKT2<G, LG, B>> map<A, B>(HKT<F, HKT2<G, LG, A>> fa, B Function(A a) f) {
@@ -283,16 +242,9 @@ FunctorComposition12C<F, G, LG> getFunctorComposition12C<F extends HKT, G extend
 }
 
 class Fc12<F extends HKT, G extends HKT2> with FunctorComposition12<F, G> {
-  static Fc12 _fc12Singleton;
   final Functor1<F> _functorF;
   final Functor2<G> _functorG;
-  factory Fc12(Functor1<F> functionF, Functor2<G> functorG) {
-    if (_fc12Singleton == null) {
-      _fc12Singleton = Fc12(functionF, functorG);
-      return _fc12Singleton;
-    }
-    return _fc12Singleton;
-  }
+  Fc12(this._functorF, this._functorG);
 
   @override
   HKT<F, HKT2<G, LG, B>> map<LG, A, B>(HKT<F, HKT2<G, LG, A>> fa, B Function(A a) f) {
@@ -306,16 +258,10 @@ FunctorComposition12<F, G> getFunctorComposition12<F extends HKT, G extends HKT2
 }
 
 class Fc11<F extends HKT, G extends HKT> with FunctorComposition11<F, G> {
-  static Fc11 _fc11Singleton;
   final Functor1<F> _functorF;
   final Functor1<G> _functorG;
-  factory Fc11(Functor1<F> functionF, Functor1<G> functorG) {
-    if (_fc11Singleton == null) {
-      _fc11Singleton = Fc11(functionF, functorG);
-      return _fc11Singleton;
-    }
-    return _fc11Singleton;
-  }
+
+  Fc11(this._functorF, this._functorG);
 
   @override
   HKT<F, HKT<G, B>> map<A, B>(HKT<F, HKT<G, A>> fa, B Function(A a) f) {
