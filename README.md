@@ -6,4 +6,5 @@ Inspired by [fp-ts](https://github.com/gcanti/fp-ts), [scalaz](https://github.co
 
 # Dart compatibility
 Running with Dart 2.1+ (mixin keyword was introduced in Dart 2.1)
+
 If you are running < Dart 2.1, you should use `abstract class` instead.
