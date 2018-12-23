@@ -4,7 +4,7 @@ A identity<A>(A a) {
 
 typedef Lazy<A> = A Function(dynamic);
 Lazy<A> constant<A>(A a) {
-  return (dynamic) => a;
+  return (_) => a;
 }
 
 typedef Function1<A, B> = B Function(A);
