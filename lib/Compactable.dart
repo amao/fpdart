@@ -162,7 +162,7 @@ CompactableComposition22<F, G> getCompactableComposition22<F extends HKT2, G ext
   return _GetCompactableComposition22(f2, c2andf2);
 }
 
-class _GetCompactableComposition2C1<F extends HKT2, G extends HKT2, LF> extends CompactableComposition2C1<F, G, LF> {
+class _GetCompactableComposition2C1<F extends HKT2, G extends HKT, LF> extends CompactableComposition2C1<F, G, LF> {
   final Functor2C<F, LF> f2c;
   final Compactable1AndFunctor1<G> c1andf1;
   _GetCompactableComposition2C1(this.f2c, this.c1andf1);
@@ -186,7 +186,7 @@ class _GetCompactableComposition2C1<F extends HKT2, G extends HKT2, LF> extends 
     return FC.map(fa, f);
   }
 }
-CompactableComposition2C1<F, G, LF> getCompactableComposition2C1<F extends HKT2, G extends HKT2, LF>(Functor2C<F, LF> f2c, Compactable1AndFunctor1<G> c1andf1) {
+CompactableComposition2C1<F, G, LF> getCompactableComposition2C1<F extends HKT2, G extends HKT, LF>(Functor2C<F, LF> f2c, Compactable1AndFunctor1<G> c1andf1) {
   return _GetCompactableComposition2C1(f2c, c1andf1);
 }
 
